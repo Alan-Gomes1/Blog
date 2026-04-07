@@ -1,5 +1,5 @@
 import { PostCoverImage } from "../PostCoverImage";
-import { PostHeading } from "../PostHeading";
+import { PostSummary } from "../PostSummary";
 
 export function PostFeatured() {
   const slug = "bryen-9";
@@ -18,20 +18,13 @@ export function PostFeatured() {
         }}
       />
 
-      <div className="flex flex-col sm:justify-center">
-        <time className="text-slate-600 text-sm/tight" dateTime="2024-06-01">
-          2024-06-01
-        </time>
-        <PostHeading url={postLink} as="h1">
-          Lorem ipsum dolor sit amet.
-        </PostHeading>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-          voluptates quam atque sint eligendi quas obcaecati non minus
-          quibusdam, totam doloribus tempora ea veniam rem deserunt autem
-          facilis commodi quasi!
-        </p>
-      </div>
+      <PostSummary
+        postLink={postLink}
+        postHeading="h1"
+        createdAt="2024-06-01"
+        title="Lorem ipsum dolor sit amet."
+        excerpt="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio voluptates quam atque sint eligendi quas obcaecati non minus quibusdam, totam doloribus tempora ea veniam rem deserunt autem facilis commodi quasi!"
+      />
     </section>
   );
 }
